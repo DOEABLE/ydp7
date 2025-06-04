@@ -26,4 +26,4 @@ services:
     stdin_open: true
     command: /bin/bash
     volumes:
-      - ./data3:/root/data
+      - ./data3:/root

@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  centos:
+    image: centos:8
+    container_name: centlinux
+    tty: true
+    stdin_open: true
+    command: /bin/bash
+    volumes:
+      - ./data:/root/data
+      #현재 디렉토리 : docker내 디렉토리
+
+  ubuntu:
+    image: ubuntu:latest
+    container_name: ubunlinux
+    tty: true
+    stdin_open: true
+    command: /bin/bash
+    volumes:
+      - ./data2:/root
+
+  rocky:
+    image: rockylinux:9
+    container_name: rocklinux
+    tty: true
+    stdin_open: true
+    command: /bin/bash
+    volumes:
+      - ./data3:/root
